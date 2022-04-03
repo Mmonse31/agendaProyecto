@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<title>Ejemplo del curso - About</title>
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+<link rel="stylesheet" href="/css/styles.css">
+<div id="root">
+    <header data-component="/layout/header" data-fragment></header>
+    <div data-component="/examples/demoForm" data-component-init></div>
+</div>
+<script src="/js/components.js"></script>
+<script>
+window.addEventListener("load", (event)=> {
+    InitComponents().then(elems => {
+        console.log("Comoponents Mounted");
+    })
+})
+</script>

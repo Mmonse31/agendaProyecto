@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejemplo del curso - Home</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="/icofont/icofont.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/idb@7/build/umd.js"></script>
+    <script src="/js/api.js"></script>
+  </head>
+  <body>
+    <aside data-component="/layout/aside" data-fragment></aside>
+    <dialog id="sidenav" data-component="/layout/aside" data-fragment></dialog>
+    <div id="root" data-type="foo">
+      <header data-component="/layout/header" data-fragment></header>
+      <main>
+        <!-- Content -->
+        <img src="/apple-touch-icon.png"/>
+        <form data-component="/task/form" data-fragment data-component-init></form>
+      </main>
+      <footer data-component="/layout/footer" data-fragment ></footer>
+    </div>
+    <dialog></dialog>
+    <script src="/js/tasks-utils.js"></script>
+    <script src="/js/components.js"></script>
+    <script></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

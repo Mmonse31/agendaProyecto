@@ -1,0 +1,179 @@
+:root {
+    --header-color: #17B890;
+    --header-padding: 12px;
+    --font-size: 24px;
+    --horizontal-bar-height: 2em;
+    --header-height: var(--horizontal-bar-height);
+    --footer-height: var(--horizontal-bar-height);
+}
+body * {
+    margin: 0;
+    padding: 0;
+}
+pre {
+    overflow-x: auto;
+}
+article {
+    width: min(900px, 100%);
+}
+#root {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    justify-content: start;
+    align-items: stretch;
+    /**/
+
+}
+#root > * {
+    flex-shrink: 0;
+    /*min-height: 10vh;*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#root > main {
+    flex-grow: 2;
+    flex-shrink: 2;
+    overflow-y: auto;
+    overflow-x: invisible;
+    padding: 1rem;
+}
+/** General Layout **/
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.25);
+}
+body > aside {
+    display: none;
+}
+#root > header {
+    background-color: var(--header-color);
+    min-height: var(--header-height);
+    padding: var(--header-padding);
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-content: baseline;
+}
+#root > header > * {
+    margin: auto 0;
+}
+#root > header > i.icofont-navigation-menu {
+  margin: 0 0.5rem;
+  order: 10;
+}
+#root > header > * {
+    margin: auto 0;
+}
+/* Generic Dialog Backdrop */
+dialog#sidenav[open] {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: min(300px, 50vw);
+  box-shadow: 0px 5px;
+  border: 0;
+}
+
+body > aside > aside,
+dialog#sidenav[open] > aside {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+body > aside > aside > header:first-child, 
+dialog#sidenav[open] > aside > header:first-child {
+  border-radius: 0;
+  border: 0;
+
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+
+  background-color: var(--header-color);
+  padding: var(--header-padding);
+  height: var(--header-height);
+  min-height: var(--header-height);
+}
+
+body > aside > aside > header:first-child > *, 
+dialog#sidenav[open] > aside > header:first-child > * {
+    margin: auto 0;
+}
+
+body > aside > aside > a, 
+dialog#sidenav[open] > aside > a {
+    padding: 1rem;
+}
+
+.not-fullscreen { display: inherit; }
+.fullscreen { display: none; }
+.hidden { display: none;}
+@media only screen and (min-width: 900px) {
+    .not-fullscreen { display: none; }
+    .fullscreen {display: inherit;}
+    dialog#sidenav, dialog#sidenav::backdrop {
+        display: none;
+    }
+    body > aside {
+        display: block;
+    }
+    body {
+        display: grid;
+        grid-template-rows: auto;
+        grid-auto-rows: 0;
+        grid-template-columns: 300px auto;
+        margin: 0;
+        padding: 0;
+    }
+    /*body > * { border: 1px solid black;}*/
+    body > #root {
+        max-width: 100%;
+    }
+}
+/** Global Footer Display
+ *
+ */
+#root > footer {
+    max-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-stretch;
+}
+
+#root > footer:empty {
+    height: 0;
+}
+#root > footer > button {
+    width: 100%;
+    border:0;
+    border-radius: 0;
+}
+#root > footer > button:first-child {
+    background-color: blue;
+}
+#root > footer > button:nth-child(2) {
+    background-color: orange;
+}
+#root > footer > button:nth-child(3) {
+    background-color: purple;
+}
+
+form > fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 0 solid black;
+}
+form > fieldset > label {
+
+}
+
+/* Task related stuff */
+
