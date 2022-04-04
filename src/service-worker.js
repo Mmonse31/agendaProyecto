@@ -5,6 +5,7 @@ const CACHE_RESOURCES = [
   "/favicon-32x32.png",
   "/favicon-16x16.png",
   "/icofont/icofont.min.css",
+  "/icons8-agenda-64.png",
 ]
 
 self.addEventListener("install", (event) => {
