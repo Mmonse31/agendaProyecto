@@ -71,6 +71,20 @@ function TasksGetByStatus(status) {
 
 function ListTasks(project=[], tags=[]) {
   GetTasksDatabase().then(db => {
-      return db.get("tasks");
-  })
+    db.getAll("tasks").then(tasks => {
+        let outerHTML = '';
+    
+        for (const key in tasks) {
+            outerHTML += '\n\
+                          <tr>\n\
+                              <td>' + tasks[key].description + '</td>\n\
+                              <td>' + tasks[key].date + '</td>\n\
+                              <td>' + tasks[key].hora + '</td>\n\
+                              <td>' + tasks[key].entry + '</td>\n\
+                          </tr>';
+        }
+        tasks = [];
+        document.querySelector("#tasksList").innerHTML = outerHTML;
+    });
+  });
 }

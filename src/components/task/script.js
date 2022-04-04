@@ -24,6 +24,7 @@ window.components.task.form = (element) => {
       )
       values["entry"] = (new Date()).toISOString();
       TaskCreate(values);
+      ListTasks();
       form.reset();
-    })
+    });
 };
