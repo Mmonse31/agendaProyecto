@@ -1,5 +1,5 @@
 :root {
-    --header-color: #17B890;
+    --header-color: #1AA1F8;
     --header-padding: 12px;
     --font-size: 24px;
     --horizontal-bar-height: 2em;
@@ -7,6 +7,7 @@
     --footer-height: var(--horizontal-bar-height);
 }
 body * {
+    font-family: 'Sniglet', cursive;
     margin: 0;
     padding: 0;
 }
@@ -16,6 +17,7 @@ pre {
 article {
     width: min(900px, 100%);
 }
+.
 #root {
     display: flex;
     flex-direction: column;
@@ -118,13 +120,15 @@ dialog#sidenav[open] > aside > a {
 
 table {
     width: 100%;
-    border: 1px solid #000;
+    border: 3px solid #AAA;
+  border-radius: .6em;
+  overflow: hidden;
  }
  th, td {
     width: 25%;
     text-align: left;
     vertical-align: top;
-    border: 1px solid #000;
+    border: 1px solid #FFF;
     border-collapse: collapse;
     padding: 0.3em;
     caption-side: bottom;
@@ -132,7 +136,9 @@ table {
  caption {
     padding: 0.3em;
     color: #fff;
-     background: #000;
+     background: #444;
+     order: 3px solid #AAA;
+  border-radius: .6em;
  }
  th {
     background: #eee;
@@ -193,8 +199,67 @@ form > fieldset {
     flex-direction: column;
     border: 0 solid black;
 }
-form > fieldset > label {
 
+#form{
+	height: 100%;	
+	background-color: #AAA;
+	overflow: hidden;
+	position: relative;
+	
+}
+form{
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 40px;
+	color: #AAA;
+	position: relative;
+	
+	
+}
+label, input, textarea{
+	display: block;	
+}
+input, textarea{
+	width: 500px;	
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #AAA;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	
+}
+
+textarea{
+	height: 100px;	
+	resize: none; 
+	overflow: auto;
+}
+input[type="submit"]{
+	background-color: #444;
+	color: white;
+	height: 50px;
+	cursor: pointer;
+	margin-top: 30px;
+	font-size: 1.29em;
+	font-family: 'Sniglet', cursive;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+input[type="submit"]:hover{
+	background-color: #444;
+	
 }
 
 /* Task related stuff */

@@ -1,6 +1,6 @@
 {
-    "name": "Simple Task Manager",
-    "short_name": "Tasks",
+    "name": "Simple schedule",
+    "short_name": "Schedule",
     "icons": [
         {
             "src": "/icons8-agenda-64.png",
