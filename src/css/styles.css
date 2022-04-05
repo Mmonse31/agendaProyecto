@@ -115,6 +115,7 @@ dialog#sidenav[open] > aside > a {
 .not-fullscreen { display: inherit; }
 .fullscreen { display: none; }
 .hidden { display: none;}
+
 table {
     width: 100%;
     border: 1px solid #000;
